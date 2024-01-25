@@ -1,0 +1,140 @@
+body {
+  box-sizing: border-box;
+  margin: 0px;
+}
+h1 {
+  text-align: center;
+}
+.main-page {
+  text-align: center;
+}
+.create-btn {
+  padding: 10px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: lightpink;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.show-modal {
+  display: flex;
+}
+.hide-modal {
+  display: none;
+}
+.modal-content {
+  position: fixed;
+  top: 50px;
+  left: 40%;
+}
+.modal-content > a {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.close-btn{
+  position: absolute;
+  top:65px;
+  left:300px;
+  cursor: pointer;
+}
+.form {
+  padding-top: 50px;
+  margin-top: 50px;
+  /* display: flex;
+  margin-left: 80px;
+  flex-direction: column;
+  align-items: center; */
+  justify-content: center;
+}
+form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+select {
+  width: calc(100% + 2px); /* Adjusting for the border width */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+tbody {
+  background-color: #fff;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  padding: 12px;
+  text-align: center;
+}
+td > button {
+  margin-right: 10px;
+}
+@media only screen and (max-width: 600px) {
+  table {
+    border: 1px solid #ddd;
+  }
+
+  th, td {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  th, td {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .modal{
+    display: flex;
+    align-items: center;
+  }
+  /* Hide table header on small screens */
+  thead {
+    display: none;
+  }
