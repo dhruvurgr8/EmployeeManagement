@@ -23,8 +23,6 @@
       <button class="create-btn">Create Employee Data</button>
       <div class="modal hide-modal">
         <div class="modal-content">
-          <!-- <h2>Enter the Employee details</h2> -->
-
           <form class="form" id="form">
             <a class="close-btn"><i class="fa-solid fa-xmark fa-2xl"></i></a>
             <label for="employeeName">Employee Name:</label>
@@ -32,11 +30,12 @@
               type="text"
               id="employeeName"
               name="employeeName"
+              value="dhruv"
               required
             /><br />
 
             <label for="gender">Gender:</label>
-            <select id="gender" name="gender" required>
+            <select id="gender" name="gender" value="male" required>
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="other">Other</option></select
@@ -61,7 +60,50 @@
           </form>
         </div>
       </div>
+
+      <!-- Edit Modal -->
+      <div class="edit-modal hide-modal">
+        <div class="modal-content">
+          <form class="edit-form" id="edit-form">
+            <a class="close-btn-edit" id="closeBtn"
+              ><i class="fa-solid fa-xmark fa-2xl"></i
+            ></a>
+            <label for="editEmployeeName">Employee Name:</label>
+            <input
+              type="text"
+              id="editEmployeeName"
+              name="editEmployeeName"
+              required
+            /><br />
+
+            <label for="editGender">Gender:</label>
+            <select id="editGender" name="editGender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option></select
+            ><br />
+
+            <label for="editRole">Role:</label>
+            <select id="editRole" name="editRole" required>
+              <option value="SDE">SDE</option>
+              <option value="DATA_ANALYST">Data Analyst</option>
+              <option value="OTHERS">Others</option></select
+            ><br />
+
+            <label for="editDateOfJoining">Date of Joining:</label>
+            <input
+              type="date"
+              id="editDateOfJoining"
+              name="editDateOfJoining"
+              required
+            /><br />
+
+            <input type="submit" value="Update" />
+          </form>
+        </div>
+      </div>
     </div>
+
     <table>
       <thead>
         <tr>
@@ -75,6 +117,7 @@
       </thead>
       <tbody class="tbody"></tbody>
     </table>
+
     <script src="script.js"></script>
   </body>
 </html>
