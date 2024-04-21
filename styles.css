@@ -1,23 +1,30 @@
-body {
-  box-sizing: border-box;
-  margin: 0px;
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-h1 {
-  text-align: center;
+
+.modal {
+  /* Make it occupy the whole document */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #9d9d9d5b;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
 }
-.main-page {
-  text-align: center;
+.modal-body {
+  background-color: white;
+  padding: 30px;
 }
-.create-btn {
-  padding: 10px;
-  text-align: center;
-  border: 2px solid black;
-  border-radius: 5px;
-  background-color: lightpink;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  cursor: pointer;
+
+.modal-body form {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
 }
 
 .show-modal {
@@ -26,115 +33,40 @@ h1 {
 .hide-modal {
   display: none;
 }
-.modal-content {
-  position: fixed;
-  top: 50px;
-  left: 40%;
-}
-.modal-content > a {
+.close-icon {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
-.close-btn{
-  position: absolute;
-  top:65px;
-  left:300px;
-  cursor: pointer;
-}
-.form {
-  padding-top: 50px;
-  margin-top: 30px;
-  
-  /* justify-content: center; */
-}
-form {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 300px;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-}
-
-input,
-select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-input[type="submit"] {
-  background-color: #4caf50;
-  color: #fff;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-select {
-  width: calc(100% + 2px); /* Adjusting for the border width */
-}
-
-table {
+.employee-list {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 30px;
 }
-
-thead {
-  background-color: #4caf50;
-  color: #fff;
+.employee-list,
+td,
+th {
+  border: 1px solid #e7e7e7;
 }
-
-tbody {
-  background-color: #fff;
-}
-
-tr {
-  border-bottom: 1px solid #ddd;
-}
-
-td {
-  padding: 12px;
+.employee-list td {
   text-align: center;
+  padding: 10px;
 }
-td > button {
-  margin-right: 10px;
-}
-@media only screen and (max-width: 600px) {
-  table {
-    border: 1px solid #ddd;
-  }
 
-  th, td {
-    width: 100%;
-    display: block;
-    text-align: center;
-  }
-
-  th, td {
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .modal{
-    display: flex;
-    align-items: center;
-  }
-  /* Hide table header on small screens */
-  thead {
-    display: none;
-  }
-#closeBtn{
+.employee-list tbody button {
+  border: none;
+  background-color: transparent;
+  box-shadow: 1px 1px 2px #e7e7e7;
   cursor: pointer;
+}
+
+.center-modal {
+  border: 2px solid red;
+  justify-content: center;
+  align-items: center;
+}
+.update-modal-body {
+  width: 400px;
 }
