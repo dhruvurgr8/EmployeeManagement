@@ -1,15 +1,3 @@
-/**
- * Every employee can have the below properties:
- * {
- *   name: "",
- *   email: "",
- *   id: unique_integer,
- *   role: "",
- *   DOJ: "",
- *   gender: "" // "MALE", "FEMALE", "OTHERES"
- * }
- */
-
 const employees = {};
 
 const modalToggleButton = document.getElementById("modal-toggle-btn");
@@ -34,7 +22,7 @@ function deleteRecord(e) {
   const deleteButton = e.target;
   const td = deleteButton.parentNode; // td element
   const tr = td.parentNode; // table row
-  tr.remove(); // <button class="material-icons">delete</button>
+  tr.remove();
 }
 
 function createNewEmployeeRecord(employee) {
@@ -89,28 +77,9 @@ form.addEventListener("submit", (e) => {
 
   // resets the form to empty values
   form.reset();
-  // closes the modal ( toggles the modal )
+
   toggleModal();
 });
-
-/**
- * HOMEWORK:
- *
- *  upon clicking on the edit open a editor popup that container an update form
- *  that popup's input feilds should be prefilled with the data of the employee
- *  upon submitting the edit popup, the record table should be updated with new data.
- */
-
-/**
- * const employees = {
- *      "1" : {
- *              name: "Aravind",
- *              email: "aravind@gmail.com",
- *              gender: "Male",
- *              role: "Product"
- *         }
- * }
- */
 
 const updateModal = document.getElementById("modal1");
 const updateForm = document.getElementById("form1");
@@ -170,20 +139,7 @@ updateForm.addEventListener("submit", (e) => {
 
   // update the tr with the new data ? which tr needs to be updated ??
   const record = document.getElementById(editingEmployeeId);
-  /**
-   * <tr id="1">
-   *          <td>Aravind Samudrala</td>
-   *          <td>samudralaaravind1708@gmail.com</td>
-   *          <td>1</td>
-   *          <td>Product</td>
-   *          <td>2024-01-15</td>
-   *          <td>male</td>
-   *          <td>
-   *              <button class="material-icons">edit</button>
-   *              <button class="material-icons">delete</button>
-   *          </td>
-   * </tr>
-   */
+
   let tdCellIndex = 0;
   for (let property in updatedInfo) {
     // property = "name", tdCellIndex = 0
